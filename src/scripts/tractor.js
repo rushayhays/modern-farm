@@ -9,3 +9,28 @@ export const plantSeeds = (yearlyPlanArr) => {
     }
     
 }
+
+// switch(yearlyPlanArr[x][y]) {
+//     case "Asparagus":
+//         const asparagusSeed = createAsparagus();
+//         addPlant(asparagusSeed);
+//         break;
+//     case "Wheat":
+//         const wheatSeed = createWheat();
+//         addPlant(wheatSeed);
+//         break;
+//     case "Soybean":
+//         const soybeanSeed = createSoybean();
+//         addPlant(soybeanSeed);
+//         break;
+//     case "Corn":
+//         const cornSeed = createCorn();
+//         addPlant(cornSeed);
+//         break;
+//     case "Potato":
+//         const potatoSeed = createPotato();
+//         addPlant(potatoSeed)
+//         break;
+//     default:
+//         console.log("something went wrong")
+//   }

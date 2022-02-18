@@ -8,20 +8,31 @@ const yearlyPlan = createPlan();
 
 console.log(yearlyPlan);
 
-//adding in code to test successful deployment of module
+// //adding in code to test successful deployment of module
 import { createAsparagus } from "./seeds/asparagus.js"
 
 const asparagusSeed = createAsparagus()
 console.log(asparagusSeed)
 
-//test wheat
+// //test wheat
 import { createWheat } from "./seeds/wheat.js"
 
-const wheatSeed = createWheat()
-console.log(wheatSeed)
+ const wheatSeed = createWheat()
+ console.log(wheatSeed)
 
 //test corn
 import { createCorn } from "./seeds/corn.js"
 
 const cornSeed = createCorn()
 console.log(cornSeed)
+
+//here we run the field test
+import { addPlant } from "./field.js";
+import { usePlants } from "./field.js";
+
+addPlant(wheatSeed);
+addPlant(asparagusSeed);
+addPlant(cornSeed);
+let mainFieldArr = usePlants();
+
+console.log(mainFieldArr);

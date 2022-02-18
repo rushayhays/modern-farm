@@ -35,4 +35,8 @@ addPlant(asparagusSeed);
 addPlant(cornSeed);
 let mainFieldArr = usePlants();
 
+//This is where the tractor/ sowing stuff starts
+
 console.log(mainFieldArr);
+import { plantSeeds } from "./tractor.js";
+plantSeeds(yearlyPlan);

@@ -26,6 +26,24 @@ import { createCorn } from "./seeds/corn.js"
 const cornSeed = createCorn()
 console.log(cornSeed)
 
+//test potato
+import { createPotato } from "./seeds/potato.js"
+
+const potatoSeed = createPotato()
+console.log(potatoSeed)
+
+//test soybean
+import { createSoybean } from "./seeds/soybean.js"
+
+const soybeanSeed = createSoybean()
+console.log(soybeanSeed)
+
+//test sunflower
+import { createSunflower } from "./seeds/sunflower.js"
+
+const sunflowerSeed = createSunflower()
+console.log(sunflowerSeed)
+
 //here we run the field test
 import { addPlant } from "./field.js";
 import { usePlants } from "./field.js";
@@ -35,4 +53,8 @@ addPlant(asparagusSeed);
 addPlant(cornSeed);
 let mainFieldArr = usePlants();
 
+//This is where the tractor/ sowing stuff starts
+
 console.log(mainFieldArr);
+import { plantSeeds } from "./tractor.js";
+plantSeeds(yearlyPlan);

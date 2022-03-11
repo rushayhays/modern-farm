@@ -6,55 +6,47 @@ import { createPlan } from "./plan.js";
 
 const yearlyPlan = createPlan();
 
-console.log(yearlyPlan);
+// console.log(yearlyPlan);
 
 // //adding in code to test successful deployment of module
+//import all the seeds
 import { createAsparagus } from "./seeds/asparagus.js"
-
-const asparagusSeed = createAsparagus()
-console.log(asparagusSeed)
-
-// //test wheat
 import { createWheat } from "./seeds/wheat.js"
-
- const wheatSeed = createWheat()
- console.log(wheatSeed)
-
-//test corn
 import { createCorn } from "./seeds/corn.js"
-
-const cornSeed = createCorn()
-console.log(cornSeed)
-
-//test potato
 import { createPotato } from "./seeds/potato.js"
-
-const potatoSeed = createPotato()
-console.log(potatoSeed)
-
-//test soybean
 import { createSoybean } from "./seeds/soybean.js"
-
-const soybeanSeed = createSoybean()
-console.log(soybeanSeed)
-
-//test sunflower
 import { createSunflower } from "./seeds/sunflower.js"
-
-const sunflowerSeed = createSunflower()
-console.log(sunflowerSeed)
-
-//here we run the field test
 import { addPlant } from "./field.js";
 import { usePlants } from "./field.js";
 
-addPlant(wheatSeed);
-addPlant(asparagusSeed);
-addPlant(cornSeed);
-let mainFieldArr = usePlants();
+//create the seeds
+const asparagusSeed = createAsparagus()
+const wheatSeed = createWheat()
+const cornSeed = createCorn()
+const potatoSeed = createPotato()
+const soybeanSeed = createSoybean()
+const sunflowerSeed = createSunflower()
+
+//here we run the field test
+
+// addPlant(wheatSeed);
+// addPlant(asparagusSeed);
+// addPlant(cornSeed);
+// let mainFieldArr = usePlants();
 
 //This is where the tractor/ sowing stuff starts
 
-console.log(mainFieldArr);
+// console.log(mainFieldArr);
 import { plantSeeds } from "./tractor.js";
+import { harvestForMarket } from "./harvester.js"
 plantSeeds(yearlyPlan);
+console.log("This is the yearly plan " + yearlyPlan);
+console.log("___________________________________________________________________________________-")
+let mainFieldArr = usePlants();
+console.log("This is what was planted in the field " + mainFieldArr);
+console.log("___________________________________________________________________________________-")
+const allPlantsHarvestedForMarket = harvestForMarket(mainFieldArr)
+console.log(allPlantsHarvestedForMarket)
+
+import { cataloger } from "./catalog.js";
+cataloger(allPlantsHarvestedForMarket);

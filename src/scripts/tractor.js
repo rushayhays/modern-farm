@@ -56,7 +56,7 @@ export const plantSeeds = (yearlyPlanArr) => {
                 default:
                     console.log("something went wrong")
               }
-            console.log(yearlyPlanArr[x][y]);
+            // console.log(yearlyPlanArr[x][y]);
         }
         
     }
